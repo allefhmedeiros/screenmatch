@@ -6,6 +6,7 @@ import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalListas {
     public static void main(String[] args) {
@@ -46,8 +47,13 @@ public class PrincipalListas {
 
         Collections.sort(buscaArtista);
         Collections.sort(lista);
+
+        //CLASSIFICAÇÃO COM BASE COLLECTIONS --> COMPARABLE
         System.out.println(lista);
         System.out.println(buscaArtista);
-
+        
+        //CLASSIFICAÇÃO COM BASE COMPARATOR --> COMPARING
+        lista.sort(Comparator.comparing(Titulo::getAnoLancamento));
+        System.out.println(lista);
     }
 }
