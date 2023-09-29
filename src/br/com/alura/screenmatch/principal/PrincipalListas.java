@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalListas {
     public static void main(String[] args) {
@@ -30,6 +31,23 @@ public class PrincipalListas {
                 System.out.println("Classificação: " + filme.getClassificacao() + "\n");
             }
         }
+
+        ArrayList<String> buscaArtista = new ArrayList<>();
+        buscaArtista.add("Marlon Brando");
+        buscaArtista.add("Anthony Hopkins");
+        buscaArtista.add("Brad Pitt");
+        buscaArtista.add("Tom Hanks");
+        buscaArtista.add("Dustin Hoffman");
+        buscaArtista.add("Al Pacino");
+        buscaArtista.add("Robert De Niro");
+        buscaArtista.add("Daniel Day-Lewis");
+        buscaArtista.add("Ralph Fiennes");
+        buscaArtista.add("Jessus Allefh");
+
+        Collections.sort(buscaArtista);
+        Collections.sort(lista);
+        System.out.println(lista);
+        System.out.println(buscaArtista);
 
     }
 }
