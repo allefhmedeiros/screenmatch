@@ -4,9 +4,7 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalListas {
     public static void main(String[] args) {
@@ -20,7 +18,7 @@ public class PrincipalListas {
         novoFilme.avaliaObra(8);
         filmePaulo.avaliaObra(10);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(filmePaulo);
         lista.add(novoFilme);
         lista.add(meuFilme);
@@ -51,7 +49,7 @@ public class PrincipalListas {
         //CLASSIFICAÇÃO COM BASE COLLECTIONS --> COMPARABLE
         System.out.println(lista);
         System.out.println(buscaArtista);
-        
+
         //CLASSIFICAÇÃO COM BASE COMPARATOR --> COMPARING
         lista.sort(Comparator.comparing(Titulo::getAnoLancamento));
         System.out.println(lista);
